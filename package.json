@@ -1,0 +1,17 @@
+{
+  "name": "network-byte-order",
+  "version": "0.1.0",
+  "description": "Reads and writes signed and unsigned integers in big-endian byte order into and out of Uint8Array buffers.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
