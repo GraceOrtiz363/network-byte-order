@@ -55,3 +55,10 @@ length integers. If you need those, wrap `DataView` yourself.
   backing buffer as your `Uint8Array`. Writes through the `DataView` are
   visible in the original `Uint8Array` immediately. A non-zero `byteOffset`
   on the input `Uint8Array` is honoured.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
